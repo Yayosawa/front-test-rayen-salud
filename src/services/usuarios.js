@@ -18,7 +18,7 @@ export const registrarUsuario = async (email,username,nombre,bio,password) => {
       redirect: 'follow'    };
 
     const res = await fetch(
-      `${process.env.REACT_APP_API_URL}usuarios/signup`,
+      `${process.env.REACT_APP_API_URL}/api/usuarios/signup`,
       requestOptions
     );
 
@@ -49,7 +49,7 @@ export const loginUsuario = async (email,password) => {
       redirect: 'follow'    };
 
     const res = await fetch(
-      `${process.env.REACT_APP_API_URL}usuarios/login`,
+      `${process.env.REACT_APP_API_URL}/api/usuarios/login`,
       requestOptions
     );
 
@@ -76,7 +76,7 @@ export const exploreUsuarios = async (token) => {
     };
 
     const res = await fetch(
-      `${process.env.REACT_APP_API_URL}usuarios/explore`,
+      `${process.env.REACT_APP_API_URL}/api/usuarios/explore`,
       requestOptions
     );
 

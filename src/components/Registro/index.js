@@ -11,7 +11,7 @@ import {
 import { registrarUsuario } from "../../services/usuarios";
 import AlertDialog from "./AlertDialog";
 import { useNavigate } from 'react-router-dom';
-
+import ImagenFondo from "../../assets/images/registrofondo.jpeg";
 
 const Registro = () => {
   const formRef = useRef();
@@ -53,6 +53,7 @@ const Registro = () => {
     <>
       <Grid container>
         <Grid item lg={6} md={0} xs={0}>
+          <img src={ImagenFondo} width="65%"/>
         </Grid>
         <Grid item lg={6} md={12} xs={12}>
           <Card
