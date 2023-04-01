@@ -21,13 +21,10 @@ const Login = () => {
     const {email,password} = Object.fromEntries(formData);
 
     const validaEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-    console.log([email,password])
     if(validaEmail.test(email) && (password.length>6 && password.length<200)){
       const resLogin = await loginUsuario(email,password);
-      console.log("RESPUESTO LOGIN=>",resLogin)
 
       if(resLogin.success){
-        console.log("INSERTA SESSION STORAGE")
         sessionStorage.setItem('session', JSON.stringify({isLogged:true,token:resLogin.data.token}))
         window.location.reload()
       }  

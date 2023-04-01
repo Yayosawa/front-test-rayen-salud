@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
 
 export default function MediaCard({userName, color}) {
-  console.log("COLO)R=>", color)
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardContent>

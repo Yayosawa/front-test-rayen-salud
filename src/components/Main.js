@@ -8,7 +8,6 @@ const Main = () => {
 
   const getSession = () => {
     const session = JSON.parse(sessionStorage.getItem('session'))
-    console.log("REVISO SESSION=>", session)
     return session || {isLogged: false}
   }
 
